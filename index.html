@@ -5,10 +5,14 @@
 		<title>望江重症</title>
 		<script language="javascript" type="text/javascript">
 			var sUserAgent = navigator.userAgent.toLowerCase();
-			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
-				window.location.href="./phone/index.html";
-			} else {
-				window.location.href="./pc/index.html";      
+			if(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)){
+				alert("不能使用Safari浏览器");
+			}else{
+				if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+					window.location.href="./phone/index.html";
+				} else {
+					window.location.href="./pc/index.html";      
+				}
 			}
 		</script>
 	</head>
