@@ -32,6 +32,14 @@ body,ul{
 	margin: 0;
 	padding: 0;
 }
+div.photos{
+	text-align:center;
+	margin:20px auto;
+}
+img.imgphoto{
+	width: 75%;
+	margin:10px auto;
+}
 div.label{
 	padding: 15px;
 	margin:0px auto;
