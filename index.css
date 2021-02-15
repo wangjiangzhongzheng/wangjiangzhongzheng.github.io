@@ -1,0 +1,44 @@
+p.zhu {
+	line-height:0px;
+	text-align:center;
+	font-family:"黑体";
+	font-size:45px;
+}
+p.Secondary_label {
+	line-height:25px;
+	text-align:center;
+	font-family:"黑体";
+	font-size:25px;
+}
+p.language{
+	line-height:0px;
+	text-align:center;
+	font-family:"Microsoft YaHei UI";
+	font-size:20px;
+}
+html,body{
+	width:100%;
+	height:100%;
+	background-color:#DEF9FF;/**/
+}
+body,ul{
+	margin: 0;/*清空外边距 上 右 下 左*/
+	padding: 0;/*清空内边距*/
+}
+div.label{
+	padding: 15px;
+	margin:0px auto;
+	width:75%;
+	height:128px;
+	background-color:#F1F1F1;
+	border:1px solid;
+	border-radius:10%;
+}
+div.language{
+	padding: 0px;
+	margin:0px left;
+	width:75px;
+	height:35px;
+	background-color:#F1F1F1;
+	border:1px solid;
+}
