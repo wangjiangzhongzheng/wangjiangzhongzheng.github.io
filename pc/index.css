@@ -42,3 +42,11 @@ div.language{
 	background-color:#F1F1F1;
 	border:1px solid;
 }
+div.photos{
+	text-align:center;
+	margin:20px auto;
+}
+img.imgphoto{
+	width: 75%;
+	margin:10px auto;
+}
