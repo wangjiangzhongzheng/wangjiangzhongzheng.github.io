@@ -16,7 +16,11 @@ html,body{
 	height:100%;
 	background-color:#DEF9FF;/**/
 }
-body,ul{
+ul{
+	margin: 0;/*清空外边距 上 右 下 左*/
+	padding: 0;/*清空内边距*/
+}
+body{
 	margin: 0;/*清空外边距 上 右 下 左*/
 	padding: 0;/*清空内边距*/
 }
@@ -32,8 +36,6 @@ div.label{
 div.photos{
 	text-align:center;
 	margin:20px auto;
+	width:75%;
 }
-img.imgphoto{
-	width: 75%;
-	margin:10px auto;
-}
+

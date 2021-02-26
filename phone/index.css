@@ -34,6 +34,9 @@ img.imgphoto{
 	width: 75%;
 	margin:10px auto;
 }
+ul :hover img.imgphoto{/*鼠标滑过ul标签，让所有li标签做事情（缩小宽为107px）*/
+	width: 80%;
+}
 div.label{
 	padding: 15px;
 	margin:20px auto;
