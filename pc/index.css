@@ -38,4 +38,9 @@ div.photos{
 	margin:20px auto;
 	width:75%;
 }
-
+img.imgphoto{
+	transition:transform 0.5s;
+}
+img.imgphoto:hover{
+	transform: scale(1.1,1.1);
+}
