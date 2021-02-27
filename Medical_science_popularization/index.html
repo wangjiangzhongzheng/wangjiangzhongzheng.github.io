@@ -13,10 +13,46 @@
 				</li>
 			</ul>
 		</div>
-		<div class="photos" >
-			<a href="https://mp.weixin.qq.com/s/UVeVlT-wY90ithtB6gdGIA"><img class="imgphoto" src="../photos/04.png" alt="mouse"/></a>
-			<a href="https://mp.weixin.qq.com/s/LGOBidd3X7ORissJ8QniMA"><img class="imgphoto" src="../photos/03.png" alt="mouse"/></a>
-			<img class="imgphoto" src="../photos/last.png" alt="mouse"/>
+		<div class="photos">
+			<ul>
+				<td><a href="https://mp.weixin.qq.com/s/AhDIVtCcrWVzZdMfowvCvg"><img class="imgphoto" id="i1" src="../photos/04.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/AhDIVtCcrWVzZdMfowvCvg"><img class="imgphoto" id="i0" src="../photos/03.png"/></a></td>
+			</ul>
+			<img src="../photos/last.png" id="i-1" align="center"/>
 		</div>
+		<script>
+			function autowidth_pc(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=1;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.35+"px;");
+					console.log(obj);
+				}
+			}
+			function autowidth_phone(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=1;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+					console.log(obj);
+				}
+			}
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				autowidth_phone();
+				window.onresize = function() {
+					autowidth_phone();
+				}
+			} else {
+				autowidth_pc();
+				window.onresize = function() {
+					autowidth_pc();
+				}   
+			}
+		</script>
 	</body>
 </html>
