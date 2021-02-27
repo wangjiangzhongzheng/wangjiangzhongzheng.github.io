@@ -3,13 +3,72 @@
 	<head>
 		<meta charset="utf-8">
 		<title>望江重症</title>
-		<script language="javascript" type="text/javascript">
+		<link rel="Shortcut Icon" href="./icon.ico" type="image/x-icon" />
+		<link href="index.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="label">
+			
+				<li type="none">
+					<p class="zhu"><a href="https://wangjiangzhongzheng.github.io" style="color:#000000">望江重症</a></p>
+					<p class="Secondary_First_label">
+						<a href="./Department_culture/index.html" style="color:#030854">科室文化</a>
+						<a href="./Document_sharing/index.html" style="color:#030854">文献分享</a>
+						<a href="./Medical_science_popularization/index.html" style="color:#030854">医学科普</a>
+					</p>
+					<p class="Secondary_Second_label">
+						<a href="./*" style="color:#030854">心理话</a>
+						<a href="./*" style="color:#030854">重症护理</a>
+						<a href="./*" style="color:#030854">医学英语</a>
+					</p>
+				</li>
+			
+		</div>
+		<div class="photos">
+			<ul>
+					<td><a href="https://mp.weixin.qq.com/s/-StyEuXuxON_k4HRWZ6scQ"><img class="imgphoto" id="i6" src="./photos/07.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/AhDIVtCcrWVzZdMfowvCvg"><img class="imgphoto" id="i5" src="./photos/06.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/qA0wZnFUb399UbR-QM6PJw"><img class="imgphoto" id="i4" src="./photos/05.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/UVeVlT-wY90ithtB6gdGIA"><img class="imgphoto" id="i3" src="./photos/04.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/LGOBidd3X7ORissJ8QniMA"><img class="imgphoto" id="i2" src="./photos/03.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/XESMlkWXzE2Dx3clHxBFrQ"><img class="imgphoto" id="i1" src="./photos/02.png"/></a></td>
+					<td><a href="https://mp.weixin.qq.com/s/rcM9niomL9IMRFIgNYcKeQ"><img class="imgphoto" id="i0" src="./photos/01.png"/></a></td>
+			</ul>
+			<img src="./photos/last.png" id="i-1" align="center"/>
+		</div>
+		<script>
+			function autowidth_pc(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=6;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.35+"px;");
+					console.log(obj);
+				}
+			}
+			function autowidth_phone(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=6;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+					console.log(obj);
+				}
+			}
 			var sUserAgent = navigator.userAgent.toLowerCase();
 			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
-				window.location.href="./phone/index.html";
+				autowidth_phone();
+				window.onresize = function() {
+					autowidth_phone();
+				}
 			} else {
-				window.location.href="./pc/index.html";      
+				autowidth_pc();
+				window.onresize = function() {
+					autowidth_pc();
+				}   
 			}
 		</script>
-	</head>
+	</body>
 </html>
