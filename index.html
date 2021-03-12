@@ -12,14 +12,20 @@
 				<li type="none">
 					<p class="zhu"><a href="https://wangjiangzhongzheng.github.io" style="color:#000000">望江重症</a></p>
 					<p class="Secondary_First_label">
-						<a href="./Department_culture/" style="color:#030854">科室文化</a>
+						<input type="button" id="Department_culture" onclick="test(id)" value="科室文化">
+						<input type="button" id="Document_sharing" onclick="test(id)" value="文献分享">
+						<input type="button" id="Medical_science_popularization" onclick="test(id)" value="医学科普">
+						<!--<a href="./Department_culture/" style="color:#030854">科室文化</a>
 						<a href="./Document_sharing/" style="color:#030854">文献分享</a>
-						<a href="./Medical_science_popularization/" style="color:#030854">医学科普</a>
+						<a href="./Medical_science_popularization/" style="color:#030854">医学科普</a>-->
 					</p>
 					<p class="Secondary_Second_label">
-						<a href="./Psychological_words/" style="color:#030854">心理话</a>
+						<input type="button" id="Psychological_words" onclick="test(id)" value="心理话">
+						<input type="button" onclick="test(id)" value="重症护理">
+						<input type="button" onclick="test(id)" value="医学英语">
+						<!--<a href="./Psychological_words/" style="color:#030854">心理话</a>
 						<a href="./*" style="color:#030854">重症护理</a>
-						<a href="./*" style="color:#030854">医学英语</a>
+						<a href="./*" style="color:#030854">医学英语</a>-->
 					</p>
 				</li>
 			
@@ -43,7 +49,7 @@
 				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
 				for (var i=0;i<=6;i++){
 					var obj = document.getElementById("i"+i);
-					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.35+"px;");
+					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.3+"px;");
 					console.log(obj);
 				}
 			}
@@ -55,6 +61,13 @@
 					var obj = document.getElementById("i"+i);
 					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
 					console.log(obj);
+				}
+			}
+			function test(kind){
+				if(kind==""){
+					alert("正在开发");
+				}else{
+					window.location.href="./"+kind+"/index.html";
 				}
 			}
 			var sUserAgent = navigator.userAgent.toLowerCase();
@@ -69,6 +82,7 @@
 					autowidth_pc();
 				}   
 			}
+			
 		</script>
 	</body>
 </html>

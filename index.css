@@ -5,17 +5,18 @@ p.zhu {
 	font-family:"黑体";
 	font-size:90px;
 }
-p.Secondary_First_label {
-	line-height:40px;
-	text-align:center;
+input[type="button"]{
+	width:30%;
+	height:55px;
 	font-family:"黑体";
-	font-size:35px;
+	font-size:30px;
+	background-color:#E4F1FF;
+}
+p.Secondary_First_label {
+	text-align:center;
 }
 p.Secondary_Second_label {
-	line-height:0px;
 	text-align:center;
-	font-family:"黑体";
-	font-size:35px;
 }
 html,body{
 	width:100%;
@@ -39,7 +40,7 @@ div.label{
 	padding: 15px;
 	margin:20px auto;
 	width:75%;
-	height:220px;
+	height:255px;
 	background-color:#F1F1F1;
 	border:1px solid;
 	border-radius:10%;
