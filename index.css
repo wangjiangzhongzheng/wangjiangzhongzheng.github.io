@@ -5,12 +5,23 @@ p.zhu {
 	font-family:"黑体";
 	font-size:90px;
 }
-input[type="button"]{
+input.kindlink[type="button"]{
 	width:30%;
 	height:55px;
 	font-family:"黑体";
 	font-size:30px;
 	background-color:#E4F1FF;
+}
+input.video[type="button"]{
+	width:77%;
+	height:55px;
+	font-family:"黑体";
+	font-size:30px;
+	background-color:#E4F1FF;
+	border-radius: 15px;
+}
+div.video{
+	text-align:center;
 }
 p.Secondary_First_label {
 	text-align:center;

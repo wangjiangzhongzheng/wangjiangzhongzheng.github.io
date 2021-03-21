@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+	<head>
+		<meta charset="utf-8">
+		<title>重症护理</title>
+		<link href="index.css" type="text/css" rel="stylesheet"/>
+		<link rel="Shortcut Icon" href="../icon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="label">
+			<ul>
+				<li type="none">
+					<p class="zhu"><a href="https://wangjiangzhongzheng.github.io/Intensive_care/" style="color:#000000">重症护理</a></p>
+				</li>
+			</ul>
+		</div>
+		<div class="photos">
+			<ul>
+				<td><a href="https://mp.weixin.qq.com/s/aIyhgVtJealK70XQ6vS3bw"><img class="imgphoto" id="i0" src="../photos/08.png"/></a></td>
+			</ul>
+			<img src="../photos/last.png" id="i-1" align="center"/>
+		</div>
+		<script>
+			function autowidth_pc(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=0;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.3+"px;");
+					console.log(obj);
+				}
+			}
+			function autowidth_phone(){
+				winWidth = document.body.clientWidth;
+				var obj = document.getElementById("i-1");
+				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+				for (var i=0;i<=0;i++){
+					var obj = document.getElementById("i"+i);
+					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
+					console.log(obj);
+				}
+			}
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				autowidth_phone();
+				window.onresize = function() {
+					autowidth_phone();
+				}
+			} else {
+				autowidth_pc();
+				window.onresize = function() {
+					autowidth_pc();
+				}   
+			}
+		</script>
+	</body>
+</html>
