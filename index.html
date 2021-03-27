@@ -9,9 +9,8 @@
 	</head>
 	<body>
 		<div class="label">
-			
 				<li type="none">
-					<p class="zhu"><a href="https://wangjiangzhongzheng.github.io/" style="color:#000000">望江重症</a></p>
+					<p class="zhu"><a href="./" style="color:#000000">望江重症</a></p>
 					<p class="Secondary_First_label">
 						<input type="button" class="kindlink" id="Department_culture" onclick="test(id)" value="科室文化">
 						<input type="button" class="kindlink" id="Document_sharing" onclick="test(id)" value="文献分享">
@@ -20,7 +19,7 @@
 					<p class="Secondary_Second_label">
 						<input type="button" class="kindlink" id="Psychological_words" onclick="test(id)" value="心理话">
 						<input type="button" class="kindlink" id="Intensive_care" onclick="test(id)" value="重症护理">
-						<input type="button" class="kindlink" onclick="test(id)" value="医学英语">
+						<input type="button" class="kindlink" id="Medical_English" onclick="test(id)" value="医学英语">
 					</p>
 				</li>
 			
@@ -30,14 +29,15 @@
 		</div>
 		<div class="photos">
 			<ul>
-					<td><a href="https://mp.weixin.qq.com/s/aIyhgVtJealK70XQ6vS3bw"><img class="imgphoto" id="i7" src="./photos/08.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/-StyEuXuxON_k4HRWZ6scQ"><img class="imgphoto" id="i6" src="./photos/07.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/AhDIVtCcrWVzZdMfowvCvg"><img class="imgphoto" id="i5" src="./photos/06.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/qA0wZnFUb399UbR-QM6PJw"><img class="imgphoto" id="i4" src="./photos/05.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/UVeVlT-wY90ithtB6gdGIA"><img class="imgphoto" id="i3" src="./photos/04.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/LGOBidd3X7ORissJ8QniMA"><img class="imgphoto" id="i2" src="./photos/03.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/XESMlkWXzE2Dx3clHxBFrQ"><img class="imgphoto" id="i1" src="./photos/02.png"/></a></td>
-					<td><a href="https://mp.weixin.qq.com/s/rcM9niomL9IMRFIgNYcKeQ"><img class="imgphoto" id="i0" src="./photos/01.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/otzcIx5oNRiEpQeQboKM6Q"><img class="imgphoto" id="i8" src="./photos/09.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/aIyhgVtJealK70XQ6vS3bw"><img class="imgphoto" id="i7" src="./photos/08.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/-StyEuXuxON_k4HRWZ6scQ"><img class="imgphoto" id="i6" src="./photos/07.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/AhDIVtCcrWVzZdMfowvCvg"><img class="imgphoto" id="i5" src="./photos/06.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/qA0wZnFUb399UbR-QM6PJw"><img class="imgphoto" id="i4" src="./photos/05.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/UVeVlT-wY90ithtB6gdGIA"><img class="imgphoto" id="i3" src="./photos/04.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/LGOBidd3X7ORissJ8QniMA"><img class="imgphoto" id="i2" src="./photos/03.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/XESMlkWXzE2Dx3clHxBFrQ"><img class="imgphoto" id="i1" src="./photos/02.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/rcM9niomL9IMRFIgNYcKeQ"><img class="imgphoto" id="i0" src="./photos/01.png"/></a></td>
 			</ul>
 			<img src="./photos/last.png" id="i-1" align="center"/>
 		</div>
@@ -46,7 +46,7 @@
 				winWidth = document.body.clientWidth;
 				var obj = document.getElementById("i-1");
 				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
-				for (var i=0;i<=7;i++){
+				for (var i=0;i<=8;i++){
 					var obj = document.getElementById("i"+i);
 					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.3+"px;");
 					console.log(obj);
@@ -56,25 +56,17 @@
 				winWidth = document.body.clientWidth;
 				var obj = document.getElementById("i-1");
 				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
-				for (var i=0;i<=7;i++){
+				for (var i=0;i<=8;i++){
 					var obj = document.getElementById("i"+i);
 					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
 					console.log(obj);
 				}
 			}
 			function test(kind){
-				if(kind==""){
-					alert("正在开发");
-				}else{
-					window.location.href="./"+kind+"/index.html";
-				}
+				window.location.href="./"+kind+"/index.html#"+window.location.href;
 			}
 			function video(){
-				if((/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))){
-					window.location.href="./Publicity/Publicity.m3u8";
-				}else{
-					window.location.href="./video.html";
-				}
+				window.location.href="./video.html#"+window.location.href;
 			}
 			var sUserAgent = navigator.userAgent.toLowerCase();
 			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {

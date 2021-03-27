@@ -7,10 +7,11 @@
 		<link rel="Shortcut Icon" href="../icon.ico" type="image/x-icon" />
 	</head>
 	<body>
+		<input id="return" type="button" class="kindlink" id="Department_culture" onclick="back()" value="返回">
 		<div class="label">
 			<ul>
 				<li type="none">
-					<p class="zhu"><a href="https://wangjiangzhongzheng.github.io/Intensive_care/" style="color:#000000">重症护理</a></p>
+					<p class="zhu" style="color:#000000">重症护理</p>
 				</li>
 			</ul>
 		</div>
@@ -30,6 +31,8 @@
 					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.3+"px;");
 					console.log(obj);
 				}
+				obj=document.getElementById("return");
+				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";background-color:#FAFFDE;font-size:"+winWidth*0.02+"px;");
 			}
 			function autowidth_phone(){
 				winWidth = document.body.clientWidth;
@@ -39,6 +42,17 @@
 					var obj = document.getElementById("i"+i);
 					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
 					console.log(obj);
+				}
+				obj=document.getElementById("return");
+				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";background-color:#FAFFDE;font-size:"+winWidth*0.04+"px;");
+			}
+			function back(){
+				var idstr=window.location.hash;
+				var b_url = idstr.split("#").join("");
+				if(b_url==""){
+					window.location.href="../";
+				}else{
+					window.location.href=b_url;
 				}
 			}
 			var sUserAgent = navigator.userAgent.toLowerCase();
