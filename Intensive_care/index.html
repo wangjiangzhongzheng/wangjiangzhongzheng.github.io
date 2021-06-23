@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 	<head>
+		<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+		<meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+		<meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+		<meta HTTP-EQUIV="expires" CONTENT="0"> 
 		<meta charset="utf-8">
 		<title>重症护理</title>
 		<link href="index.css" type="text/css" rel="stylesheet"/>
@@ -22,13 +26,22 @@
 			<img src="../photos/last.png" id="i-1" align="center"/>
 		</div>
 		<script>
+			function getElementsByClassName(n) {
+    			var classElements = [],allElements = document.getElementsByTagName('img');//所有div
+    			for (var i=0; i< allElements.length; i++ ){
+       				if (allElements[i].className == n ) {
+           				classElements[classElements.length] = allElements[i];
+        			}
+   				}
+  				return classElements.length-1;
+			}
 			function autowidth_pc(){
 				winWidth = document.body.clientWidth;
 				var obj = document.getElementById("i-1");
 				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
-				for (var i=0;i<=0;i++){
+				for (var i=0;i<=getElementsByClassName("imgphoto");i++){
 					var obj = document.getElementById("i"+i);
-					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.3+"px;");
+					obj.setAttribute("style","width:"+winWidth*0.35+"px;"+"height:"+winWidth*0.28+"px;");
 					console.log(obj);
 				}
 				obj=document.getElementById("return");
@@ -38,7 +51,7 @@
 				winWidth = document.body.clientWidth;
 				var obj = document.getElementById("i-1");
 				obj.setAttribute("style","width:"+winWidth*0.75+"px;");
-				for (var i=0;i<=0;i++){
+				for (var i=0;i<=getElementsByClassName("imgphoto");i++){
 					var obj = document.getElementById("i"+i);
 					obj.setAttribute("style","width:"+winWidth*0.75+"px;");
 					console.log(obj);
