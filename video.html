@@ -1,61 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>科室宣传片</title>
-	<link rel="Shortcut Icon" href="./icon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="./video.js/video-js.css">
-    <script src="./video.js/video.js"></script>
-    <script src="./videojs-contrib-hls.js"></script>
-	<style>
-		html,body{
-			background-color:#DEF9FF;/**/
-		}
-	</style>
-</head>
-<body>
-	<div id="rd">
+<html lang="zh_CN">
+	<head>
+		<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+		<meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+		<meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+		<meta HTTP-EQUIV="expires" CONTENT="0"> 
+		<meta charset="utf-8">
+		<title>宣传片</title>
+		<link href="video.css" type="text/css" rel="stylesheet"/>
+		<link rel="Shortcut Icon" href="./icon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./video.js/video-js.css">
+    	<script src="./video.js/video.js"></script>
+    	<script src="./videojs-contrib-hls.js"></script>
+	</head>
+	<body>
 		<input id="return" type="button" class="kindlink" id="Department_culture" onclick="back()" value="返回">
-	</div>
-	<video style="object-fit:fill;" id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" data-setup='{}'> 
-        	<source id="source" src="./Publicity/Publicity.m3u8"  type="application/x-mpegURL">
-    </video>
-	<script>
-		function autowidth_pc(){
-			winWidth = document.body.clientWidth;
-			obj=document.getElementById("return");
-			obj.setAttribute("style","width:"+winWidth*0.06+"px;"+"height:"+winWidth*0.03+"px;"+"font-family:\"黑体\";background-color:#E4F1FF;font-size:"+winWidth*0.02+"px;");
-			obj=document.getElementById("rd");
-			obj.setAttribute("style","margin:"+winWidth*0.007+"px;");
-		}
-		function autowidth_phone(){
-			winWidth = document.body.clientWidth;
-			obj=document.getElementById("return");
-			obj.setAttribute("style","width:"+winWidth*0.12+"px;"+"height:"+winWidth*0.06+"px;"+"font-family:\"黑体\";background-color:#E4F1FF;font-size:"+winWidth*0.03+"px;");
-			obj=document.getElementById("rd");
-			obj.setAttribute("style","margin:"+winWidth*0.007+"px;");
-		}
-		function back(){
-			var idstr=window.location.hash;
-			var b_url = idstr.split("#").join("");
-			if(b_url==""){
-					window.location.href="./";
-				}else{
-					window.location.href=b_url;
-				}
-		}
-		var sUserAgent = navigator.userAgent.toLowerCase();
-		if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
-			autowidth_phone();
-			window.onresize = function() {
-				autowidth_phone();
+		<div class="label">
+			<ul>
+				<li type="none">
+					<p class="zhu" style="color:#000000">宣传片</p>
+				</li>
+			</ul>
+		</div>
+		<div class="video">
+			<video style="object-fit:fill;" id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" data-setup='{}'> 
+				<source id="source" src="./Publicity/Publicity.m3u8"  type="application/x-mpegURL">
+			</video>
+		</div>
+		<div class="photos">
+			<img src="./photos/share_3.png"/>
+		</div>
+		<script>
+			function autowidth_pc(){
+				winWidth = document.body.clientWidth;
+				obj=document.getElementById("return");
+				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";background-color:#DDE1FF;font-size:"+winWidth*0.02+"px;");
 			}
-		} else {
-			autowidth_pc();
-			window.onresize = function() {
+			function autowidth_phone(){
+				winWidth = document.body.clientWidth;
+				obj=document.getElementById("return");
+				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";background-color:#DDE1FF;font-size:"+winWidth*0.03+"px;");
+			}
+			function back(){
+				var idstr=window.location.hash;
+				var b_url = idstr.split("#").join("");
+				if(b_url==""){
+						window.location.href="./";
+					}else{
+						window.location.href=b_url;
+					}
+			}
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				autowidth_phone();
+				window.onresize = function() {
+					autowidth_phone();
+				}
+			} else {
 				autowidth_pc();
-			}   
-		}
-	</script>
-</body>
+				window.onresize = function() {
+					autowidth_pc();
+				}   
+			}
+		</script>
+	</body>
 </html>
