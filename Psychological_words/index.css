@@ -4,6 +4,7 @@ p.zhu {
 	text-align:center;
 	font-family:"黑体";
 	font-size:90px;
+	color:#000000;
 }
 html,body{
 	width:100%;
@@ -31,10 +32,43 @@ div.label{
 	background-color:#D1EBE2;
 	border:1px solid;
 	border-radius:10%;
+	background-image:linear-gradient(45deg,#D1EBE2,#79F1A4);
+}
+input{
+	background-color:#D1EBE2;
+	color: #000000;
+	border:1px solid;
+	border-color: #000000;
+	background-image:linear-gradient(45deg,#D1EBE2,#79F1A4);
 }
 img.imgphoto{
 	transition:transform 0.5s;
 }
 img.imgphoto:hover{
 	transform: scale(1.1,1.1);
+}
+img.qr{
+	content: url('../photos/share_3.png')
+}
+@media screen and (prefers-color-scheme: dark) {
+	html,body{
+		background-color: #1f1f1f;
+	}
+	p.zhu{
+		color:#FFFFFF;
+	}
+	div.label{
+		background-color: #285847;
+		border-color: #FFFFFF;
+		background-image:linear-gradient(45deg,#377238,#285847);
+	}
+	input{
+		background-color: #285847;
+		color:#FFFFFF;
+		border-color: #FFFFFF;
+		background-image:linear-gradient(45deg,#377238,#285847);
+	}
+	img.qr{
+		content: url('../photos_dark/share_3.png')
+	}
 }

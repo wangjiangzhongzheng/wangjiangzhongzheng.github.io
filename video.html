@@ -18,7 +18,7 @@
 		<div class="label">
 			<ul>
 				<li type="none">
-					<p class="zhu" style="color:#000000">宣传片</p>
+					<p class="zhu">宣传片</p>
 				</li>
 			</ul>
 		</div>
@@ -28,18 +28,18 @@
 			</video>
 		</div>
 		<div class="photos">
-			<img src="./photos/share_3.png"/>
+			<img class="qr" src="./photos/share_3.png"/>
 		</div>
 		<script>
 			function autowidth_pc(){
 				winWidth = document.body.clientWidth;
 				obj=document.getElementById("return");
-				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";background-color:#DDE1FF;font-size:"+winWidth*0.02+"px;");
+				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";font-size:"+winWidth*0.02+"px;");
 			}
 			function autowidth_phone(){
 				winWidth = document.body.clientWidth;
 				obj=document.getElementById("return");
-				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";background-color:#DDE1FF;font-size:"+winWidth*0.03+"px;");
+				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";font-size:"+winWidth*0.03+"px;");
 			}
 			function back(){
 				var idstr=window.location.hash;

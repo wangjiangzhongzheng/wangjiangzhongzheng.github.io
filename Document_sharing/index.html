@@ -15,19 +15,40 @@
 		<div class="label">
 			<ul>
 				<li type="none">
-					<p class="zhu" style="color:#000000">文献分享</p>
+					<p class="zhu">文献分享</p>
 				</li>
 			</ul>
 		</div>
 		<div class="photos">
 			<ul>
 				<td><a href="https://mp.weixin.qq.com/s/3M7HXcQzIYw1ecOB_rEr3A"><img class="imgphoto" id="i1" src="../photos/10.png"/></a></td>
-				<td><a href="https://mp.weixin.qq.com/s/qA0wZnFUb399UbR-QM6PJw"><img class="imgphoto" id="i0" src="../photos/05.png"/></a></td>
+				<td><a href="https://mp.weixin.qq.com/s/qA0wZnFUb399UbR-QM6PJw"><img class="imgphoto" id="i0" src="../photos/5.png"/></a></td>
 
 			</ul>
-			<img src="../photos/last.png" id="i-1" align="center"/>
+			<img class="qr" src="../photos/share_3.png" id="i-1" align="center"/>
 		</div>
 		<script>
+			const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+			function darkModeHandler() {
+				if (mediaQuery.matches) {
+					for (var i=0;i<=getElementsByClassName("imgphoto");i++){
+						var obj = document.getElementById("i"+i);
+						var path =document.getElementById("i"+i).src;
+						var a=path.split("photos")[1];
+						obj.setAttribute("src","../photos_dark/"+a);
+					}
+				} else {
+					for (var i=0;i<=getElementsByClassName("imgphoto");i++){
+						var obj = document.getElementById("i"+i);
+						var path =document.getElementById("i"+i).src;
+						var a=path.split("photos_dark")[1];
+						if(a!= undefined)
+						obj.setAttribute("src","../photos/"+a);
+					}
+				}
+			}
+			darkModeHandler()
+			mediaQuery.addListener(darkModeHandler)
 			function getElementsByClassName(n) {
     			var classElements = [],allElements = document.getElementsByTagName('img');//所有div
     			for (var i=0; i< allElements.length; i++ ){
@@ -47,7 +68,7 @@
 					console.log(obj);
 				}
 				obj=document.getElementById("return");
-				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";background-color:#DBF8FF;font-size:"+winWidth*0.02+"px;");
+				obj.setAttribute("style","width:"+winWidth*0.065+"px;"+"height:"+winWidth*0.035+"px;"+"font-family:\"黑体\";font-size:"+winWidth*0.02+"px;");
 			}
 			function autowidth_phone(){
 				winWidth = document.body.clientWidth;
@@ -59,7 +80,7 @@
 					console.log(obj);
 				}
 				obj=document.getElementById("return");
-				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";background-color:#DBF8FF;font-size:"+winWidth*0.04+"px;");
+				obj.setAttribute("style","width:"+winWidth*0.15+"px;"+"height:"+winWidth*0.08+"px;"+"font-family:\"黑体\";font-size:"+winWidth*0.04+"px;");
 			}
 			function back(){
 				var idstr=window.location.hash;

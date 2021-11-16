@@ -4,6 +4,7 @@ p.zhu {
 	text-align:center;
 	font-family:"黑体";
 	font-size:90px;
+	color:#000000;
 }
 html,body{
 	width:100%;
@@ -18,6 +19,13 @@ body{
 	margin: 0;/*清空外边距 上 右 下 左*/
 	padding: 0;/*清空内边距*/
 }
+input{
+	background-color:#DBF8FF;
+	color: #000000;
+	border:1px solid;
+	border-color: #000000;
+	background-image:linear-gradient(45deg,#DBF8FF,#5EFCE8);
+}
 div.photos{
 	text-align:center;
 	margin:20px auto;
@@ -31,10 +39,36 @@ div.label{
 	background-color:#DBF8FF;
 	border:1px solid;
 	border-radius:10%;
+	background-image:linear-gradient(45deg,#DBF8FF,#5EFCE8);
 }
 img.imgphoto{
 	transition:transform 0.5s;
 }
 img.imgphoto:hover{
 	transform: scale(1.1,1.1);
+}
+img.qr{
+	content: url('../photos/share_3.png')
+}
+@media screen and (prefers-color-scheme: dark) {
+	html,body{
+		background-color: #1f1f1f;
+	}
+	p.zhu{
+		color:#FFFFFF;
+	}
+	div.label{
+		background-color: #062b35;
+		border-color: #FFFFFF;
+		background-image:linear-gradient(45deg,#1D6B72,#062b35);
+	}
+	input{
+		background-color: #062b35;
+		color:#FFFFFF;
+		border-color: #FFFFFF;
+		background-image:linear-gradient(45deg,#1D6B72,#062b35);
+	}
+	img.qr{
+		content: url('../photos_dark/share_3.png')
+	}
 }
