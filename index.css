@@ -32,11 +32,10 @@ img.imgphoto:hover{
 	transform: scale(1.1,1.1);
 }
 div.entry-content{
+	margin:auto;
 	margin-top:1%;
 }
-div.wp-block-button{
-	width:25%;
-}
+
 @media screen and (prefers-color-scheme: dark) {
 	html,body{
 		background-color: #012d33;
